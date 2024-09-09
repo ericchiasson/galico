@@ -47,9 +47,36 @@
         "logo": "https://www.galico.ca/img/Galico_logo_240px.png"
       }
     </script>
+	<style>
+        /* Banner styling */
+        #disclaimer-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff9913; /* orange background */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+        }
+        #disclaimer-banner a {
+            color: #ffff66; /* Light yellow for links */
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+    </style>
   </head>
 
   <body>
+  
+   <!-- Disclaimer Banner -->
+    <div id="disclaimer-banner">
+        NOTICE: Due to high demand, gas services are scheduled 2 months out. Thank you for your understanding
+    </div>
+  
     <!-- Spinner Start -->
     <div
       id="spinner"
