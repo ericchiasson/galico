@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Galico - Affordable Water Heaters and Everyday Comfort</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="keywords" content="Gas services in Almonte, Arnprior, Carleton Place, Carp, Kanata, Nepean, Perth, Stittsville, Smiths Falls; trusted gas technician, gas range installation, gas stove installation, tankless water heater installation, radiant floor installation, gas BBQ connection." />
+	<meta name="description" content="Galico is a highly-rated provider of gas services in Almonte and surrounding areas. They specialize in gas appliance installation and new construction, with a 5-star rating on Google and fast, reliable service." />
+	<meta name="author" content="Galico">
+    <link rel="canonical" href="https://galico.ca">
+    <meta property="og:title" content="Galico | Professional Gas Installation">
+    <meta property="og:description" content="Providing reliable gas services for home builders and homeowners in West Ottawa, Ontario.">
+    <meta property="og:image" content="https://galico.ca/img/Galico_logo_240px.png">
+    <meta property="og:url" content="https://galico.ca">
+    <meta property="og:type" content="website">
+	
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+	
+   <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const priceElement = document.getElementById("productPrice");
+  const optionRadios = document.querySelectorAll('input[name="purchaseOption"]');
+  const sizeDropdown = document.getElementById("size");
+  const descTab = document.getElementById("description");
+  const specTab = document.getElementById("specification");
+  const mainImage = document.getElementById("mainImage");
+  const thumbnailGallery = document.getElementById("thumbnailGallery");
+   
+  // Pricing Table: [fuel][size]
+  const pricing = {
+    Buy: { 
+		pv40: 2045, 
+		pv50: 2245, 
+		pv60: 2695, 
+		pv75: 4045,
+		lp40: 2245, 
+		lp50: 2695, 
+		lp60: 2895, 
+		ho50: 3145,
+		av40: 2045, 
+		av50: 2245, 
+		av60: 2695, 
+		dv40: 3145, 
+		dv50: 3145, 
+		dv75: 4945 
+		},
+    Subscription: { 
+		pv40: 19.95, 
+		pv50: 24.95, 
+		pv60: 29.95, 
+		pv75: 44.95,
+		lp40: 24.95, 
+		lp50: 29.95, 
+		lp60: 39.95, 
+		ho50: 34.95,
+		av40: 19.95, 
+		av50: 24.95, 
+		av60: 29.95, 
+		dv40: 34.95, 
+		dv50: 34.95, 
+		dv75: 54.95 
+		},
+  };
+
+  const productContent = {
+    pv40: {
+      desc: "The Bradford White RG1PV40S6N is a 40-gallon natural gas water heater designed for homes with one to two occupants. With a 40,000 BTU heating capacity, it ensures a consistent and efficient hot water supply for daily household needs.<br><br>Power Vent Technology for Flexible Installation: This model features Power Vent technology, utilizing a fan-assisted exhaust system to safely vent gases through a dedicated pipe instead of a traditional chimney. This allows for greater flexibility in installation, making it ideal for homes that require alternative venting solutions while ensuring efficient operation.<br><br>Performance & Energy Efficiency : With a Uniform Energy Factor (UEF) of 0.68, this model falls within the mid-range efficiency category. While it does not carry ENERGY STAR? certification, it delivers reliable heating performance with optimized gas consumption. The average lifespan of this unit ranges between 8 to 12 years, depending on proper maintenance and water quality. To extend its longevity, routine maintenance such as flushing the tank to remove sediment buildup and inspecting the anode rod is recommended.<br><br>Installation: Galico will perform a complimentary Remove & Replace (Re & Re) installation, which includes disconnecting your old tank and replacing it with your new one.  Any additional work, such as retrofit to different water heater type (e.g. atomospheric to power vent), will occur a surcharge at a rate of $130/hr plus materials.",
+      spec: "<ul><li>Capacity: 40 Gallons</li><li>Power Vent</li><li>Energy Star Certified</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+    pv50: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	pv60: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	pv75: {
+      desc: "75 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	lp40: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	lp50: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	lp60: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	ho50: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/powerdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	av40: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/atmosphericdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	av50: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/atmosphericdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	av60: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/atmosphericdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	dv40: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/directdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	dv50: {
+      desc: "50 Gallon Power Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 50 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/directdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    },
+	dv75: {
+      desc: "75 Gallon Direct Vent water heater, a versatile option for medium households with balanced performance.",
+      spec: "<ul><li>Capacity: 75 Gallons</li><li>Power Vent</li><li>High Efficiency</li></ul>",
+      images: ["img/prod/directdhw.jpg", "img/prod/atmosphericdhw.jpg", "img/prod/electricdhw.jpg"]
+    }
+  };
+
+  function updateProductInfo() {
+    const selectedOption = document.querySelector('input[name="purchaseOption"]:checked').value;
+    const selectedSize = sizeDropdown.value;
+
+    // Update Price
+    const newPrice = pricing[selectedOption][selectedSize];
+    priceElement.textContent = (selectedOption === "Buy")
+      ? `$${newPrice.toFixed(2)}`
+      : `$${newPrice.toFixed(2)}/month`;
+
+    // Update Tabs
+    descTab.innerHTML = productContent[selectedSize].desc;
+    specTab.innerHTML = productContent[selectedSize].spec;
+
+    // Update Images
+    const images = productContent[selectedSize].images;
+    mainImage.src = images[0];
+    thumbnailGallery.innerHTML = "";
+    images.forEach(img => {
+      const thumb = document.createElement("img");
+      thumb.src = img;
+      thumb.className = "img-thumbnail";
+      thumb.style.width = "70px";
+      thumb.style.cursor = "pointer";
+      thumb.addEventListener("click", () => { mainImage.src = img; });
+      thumbnailGallery.appendChild(thumb);
+    });
+  }
+
+  // Event Listeners
+  optionRadios.forEach(radio => radio.addEventListener("change", updateProductInfo));
+  sizeDropdown.addEventListener("change", updateProductInfo);
+
+  // Initialize
+  updateProductInfo();
+  });
+</script>
+
+
+   <style>
+        /* Banner styling */
+        #disclaimer-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff9913; /* orange background */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+        }
+        #disclaimer-banner a {
+            color: #ffff66; /* Light yellow for links */
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+        /* Force thumbnails to be 80px wide and 80px tall */
+        .thumb.img-thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover; /* This ensures the image fills the space without distortion, cropping if necessary */
+       }
+   </style>
+  </head>
+
+  <body>
+  
+   <!-- Disclaimer Banner Start -->
+<!--     <div id="disclaimer-banner">
+        NOTICE: <b>Galico is temporarily closed.</b> Scheduled to reopen on April 1, 2025.
+    </div> -->
+   <!-- Disclaimer Banner End -->
+  
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div
+            class="h-100 d-inline-flex align-items-center border-start border-end px-3"
+          >
+            <small class="fa fa-phone-alt me-2"></small>
+            <small>(613) 240-4911</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center border-end px-3">
+            <small class="far fa-envelope-open me-2"></small>
+            <small>hello@galico.ca</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center border-end px-3">
+            <small class="far fa-clock me-2"></small>
+            <small>8 AM - 8 PM (Weekdays & Weekends)</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-3 text-end">
+          <div class="h-100 d-inline-flex align-items-center border-end border-start">
+            <a class="btn btn-square border-end">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+            <a class="btn btn-square border-end">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a class="h-100 d-inline-flex align-items-center px-3">
+				<small>/galicogas</small>
+			</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0"
+    >
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0">
+          <img src="img/logo.jpg" alt="Galico logo">
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-3 py-lg-0">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <!-- <a href="#services" class="nav-item nav-link">Our Services</a> -->
+		  <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Our Products</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="dhwtank.html" class="dropdown-item active">Tank Water Heater</a>
+              <a href="dhwtankless.html" class="dropdown-item">Tankless Water Heater</a>
+              <a href="furnacehtml" class="dropdown-item">Furnace</a>
+              <a href="boiler.html" class="dropdown-item">Boiler</a>
+            </div>
+          </div>
+		  <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Our Services</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="feature.html" class="dropdown-item active">Gas Connection</a>
+              <a href="appointment.html" class="dropdown-item">Gas Installation</a>
+              <a href="team.html" class="dropdown-item">Standby Generator</a>
+              <a href="testimonial.html" class="dropdown-item">Smart Thermostat</a>
+              <a href="404.html" class="dropdown-item">Financing</a>
+            </div>
+          </div>
+		  <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
+		  <a href="#about" class="nav-item nav-link">About Galico</a>
+		  <a href="#blog" class="nav-item nav-link">Blog</a>
+		  <a href="faq.html" class="nav-item nav-link">FAQs</a>
+          <a href="#contact" class="nav-item nav-link">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+<!-- Product Page Start -->
+	<section id="Product" class="container-xxl py-5">
+      <div class="container" data-aos="fade-up"">
+        <div class="row g-5 align-items-end mb-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="border-start border-5 border-primary ps-4">
+              <h6 class="text-body text-uppercase mb-2">Making it easy</h6>
+              <h1 class="display-6 mb-0">
+                Our Products
+              </h1>
+            </div>
+          </div>
+        </div>
+<div class="container my-5 product-page">
+  <div class="row g-5">
+    
+    <!-- Product Images -->
+    <div class="col-md-6">
+		<div class="text-center">
+			<img id="mainImage" src="img/prod/powerdhw.jpg" class="img-fluid mb-2" alt="Product Image" style="max-height:350px;">
+		</div>	
+		<div id="thumbnailGallery" class="d-flex justify-content-center gap-2">
+		<!-- Thumbnails will be injected here -->
+		</div>
+      
+
+
+    <!-- Features Icons -->
+	  <div class="d-flex justify-content-between mt-4">
+		<div class="text-center">
+		  <i class="bi bi-droplet fs-3 text-primary"></i>
+		  <div class="small">Reliable<br>Water Heater</div>
+		</div>
+		<div class="text-center">
+		  <i class="bi bi-tools fs-3 text-primary"></i>
+		  <div class="small">Re & Re<br>Installation<br>Included</div>
+		</div>		
+		<div class="text-center">
+		  <i class="bi bi-shield-check fs-3 text-primary"></i>
+		  <div class="small">Durable</div>
+		</div>		
+		<div class="text-center">
+		  <i class="bi bi-fan fs-3 text-primary"></i>
+		  <div class="small">Venting<br>Options</div>
+		</div>
+
+	  </div>
+	</div> 
+    <!-- Product Details -->
+
+    <div class="col-md-6">
+      <h1 class="mb-3">Tank Water Heater</h1>
+      <!-- <p class="text-muted">Professional-grade natural gas water heater with flexible purchase options.</p> -->
+
+      <!-- Purchase Type -->
+	<div class="mb-3">
+	  <label class="form-label fw-bold">Purchase Option:</label>
+	  <div>
+		<input type="radio" id="buy" name="purchaseOption" value="Buy" checked>
+		<label for="buy">Buy Outright</label>
+
+		<input type="radio" id="subscription" name="purchaseOption" value="Subscription" class="ms-3"> <!-- disabled> -->
+		<label for="subscription">Subscription (Coming Soon)</label>
+	  </div>
+	</div>
+
+      <!-- Size Select -->
+<div class="mb-3">
+  <label for="size" class="form-label fw-bold">Water Heater Type / Size</label>
+  <select class="form-select" id="size">
+<optgroup label="Power Vent Water Heater">
+      <option value="pv40">Power Vent 40 Gallon Water Heater - Best for Family of 2-3</option>
+      <option value="pv50" selected>Power Vent 50 Gallon Water Heater - Best for Family of 2-5</option>
+      <option value="pv60">Power Vent 60 Gallon Water Heater - Best for Family of 5+</option>
+      <option value="pv75">Power Vent 75 Gallon Water Heater - Best for Family of 6+</option>
+    </optgroup>
+	<optgroup label="Power Vent Water Heater - Propane">
+      <option value="lp40">Propane Power Vent 40 Gallon Water Heater - Best for Family of 2-3</option>
+      <option value="lp50">Propane Power Vent 50 Gallon Water Heater - Best for Family of 2-5</option>
+      <option value="lp60">Propane Power Vent 60 Gallon Water Heater - Best for Family of 5+</option>
+    </optgroup>
+    <optgroup label="High-Output Power Vent Water Heater">
+      <option value="ho50">High-Output Power Vent 50 Gallon Water Heater - Best for Family of 2-5</option>
+    </optgroup>  
+	<optgroup label="Atmospheric Vent Water Heater">
+      <option value="av40">Atmospheric Vent 40 Gallon Water Heater - Best for Family of 2-3</option>
+      <option value="av50">Atmospheric Vent 50 Gallon Water Heater - Best for Family of 2-5</option>
+      <option value="av60">Atmospheric Vent 60 Gallon Water Heater - Best for Family of 5+</option>
+    </optgroup>
+	<optgroup label="Power Direct Vent Water Heater">
+	  <option value="dv40">Direct Power Vent 40 Gallon Water Heater - Best for Family of 2-3</option>
+      <option value="dv50" >Direct Power Vent 50 Gallon Water Heater - Best for Family of 2-5</option>
+      <option value="dv75">Direct Power Vent 75 Gallon Water Heater - Best for Family of 6+</option>
+    </optgroup>
+
+  </select>
+</div>
+
+	<!-- Display Price -->
+	<div class="mb-3">
+	  <h4>Price: <span id="productPrice">$0.00</span></h4>
+	</div>
+
+      <!-- Action Button -->
+      <button id="actionButton" class="btn btn-primary btn-lg w-100">Order Now</button>
+    
+	      <!-- Tabs for Description / Specification / Warranty -->
+	<div class="mt-4">
+	<ul class="nav nav-tabs" id="productTabs" role="tablist">
+	  <li class="nav-item" role="presentation">
+		<button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#description" type="button">Description</button>
+	  </li>
+	  <li class="nav-item" role="presentation">
+		<button class="nav-link" id="spec-tab" data-bs-toggle="tab" data-bs-target="#specification" type="button">Specification</button>
+	  </li>
+	  <li class="nav-item" role="presentation">
+		<button class="nav-link" id="warranty-tab" data-bs-toggle="tab" data-bs-target="#warranty" type="button">Warranty</button>
+	  </li>
+	</ul>
+	<div class="tab-content mt-3">
+	  <div class="tab-pane fade show active" id="description">Loading...</div>
+	  <div class="tab-pane fade" id="specification">Loading...</div>
+	  <div class="tab-pane fade" id="warranty">10-Year Limited Tank Warranty</div>
+	</div>
+  </div>
+</div>
+</section>
+
+<!-- Product Page End -->
+
+<!-- Reviews Section -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <h3 class="text-center mb-4">Customer Reviews</h3>
+      
+      <!-- Review 1 -->
+      <div class="border rounded p-4 mb-4">
+	    <div class="text-center mb-3">
+            <img src="img/prod/andree.jpg" alt="Andree DHW" class="img-fluid rounded" style="max-height: 200px; object-fit: cover;">
+        </div>
+        <div class="d-flex align-items-center justify-content-center mb-3">
+		  <div class="me-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+          <small class="text-muted">Andree Condie</small>
+        </div>
+        <p class="text-center mb-0">"Professionnel, meticulous, clean attentive service would highly recommend"</p>
+      </div>
+      
+      <!-- Review 2 -->
+      <div class="border rounded p-4 mb-4">
+        <div class="d-flex align-items-center justify-content-center mb-3">
+          <div class="me-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+          <small class="text-muted">Vyacheslav Zavadsky</small>
+        </div>
+        <p class="text-center mb-0">"Hard working, well equipped and reasonable. What else you can ask for..."</p>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="blog" class="container-xxl py-5">
+      <div class="container" data-aos="fade-up"">
+        <div class="row g-5 align-items-end mb-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="border-start border-5 border-primary ps-4">
+              <h6 class="text-body text-uppercase mb-2">Stay in the know</h6>
+              <h1 class="display-6 mb-0">
+                Related Blog Posts
+              </h1>
+            </div>
+          </div>
+        </div>
+
+      <div class="row gy-5">
+
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="img/blog_1.jpg" class="img-fluid" alt="comtemplating couple">
+              <span class="post-date">June 25</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">Renting vs. Owning a Water Heater: Which Option is Right for You?</h3>
+
+              <!-- <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Eric Chiasson</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Water Heater</span>
+                </div>
+              </div> -->
+
+              <hr>
+
+              <a href="https://galico.substack.com/p/renting-vs-owning-a-water-heater" class="readmore stretched-link"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+		
+		<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="img/blog_2.jpg" class="img-fluid" alt="man standing in front of standby generator">
+              <span class="post-date">September 13</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">What is the True Cost of Installing a Standby Generator</h3>
+
+              <!-- <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Eric Chiasson</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Water Heater</span>
+                </div>
+              </div> -->
+
+              <hr>
+
+              <a href="https://galico.substack.com/p/what-is-the-true-cost-of-installing" class="readmore stretched-link"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+<!--         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="img/blog_2.jpg" class="img-fluid" alt="comtemplating couple">
+              <span class="post-date">June 25</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">Google Nest vs. Ecobee: A professional's perspective</h3>
+
+              <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Eric Chiasson</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Smart Thermostat</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+      </div>
+      </div>
+    </section>
+    <!-- End Recent Blog Posts Section --> 
+ 
+
+
+	
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+	  id="contact"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <!-- <h1 class="text-white mb-4">
+              Galico
+            </h1> -->
+			<h4 class="text-light mb-4">Galico</h4>
+            <p>
+              Galico is a company specialized in residential natural gas and liquid propane applications.  Located in Almonte Ontario, We serves Ottawa-West and surroundings.
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/galicogas/" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/galicogas/" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Contact</h4>
+			<p><i class="fa fa-map-marker-alt me-3"></i>Almonte, Ontario</p>
+            <p><i class="fa fa-phone-alt me-3"></i>(613) 240-4911</p>
+            <p><i class="fa fa-envelope me-3"></i>hello@galico.ca</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+			<a class="btn btn-link" href="#services" class="nav-item nav-link">Our Services</a>
+		    <a class="btn btn-link" href="#testimonial" class="nav-item nav-link">Testimonial</a>
+		    <a class="btn btn-link" href="#about" class="nav-item nav-link">About Us</a>
+		    <a class="btn btn-link" href="#blog" class="nav-item nav-link">Blog</a>
+		    <a class="btn btn-link" href="faq.html" class="nav-item nav-link">FAQs</a>
+          </div>
+		  <div class="col-lg-3 col-md-6">
+			<h4 class="text-light mb-4">TSSA Heating Fuel Contractor</h4>
+			<p>FS-R-52509</p>
+     		<img src="img/cp-chamber-w1.png" class="img-fluid" alt="Member of the Carelton Place and Districts Chamber of Commerce">
+          </div>
+        </div>
+      </div>
+<!-- 	  <div class="container">
+		<p>Gas Appliance Installation ·	Gas BBQ Installation · Gas BBQ Connection · Gas Cooktop Connection · Gas Grill Installation · Gas Fire pit Installation · Gas Fireplace Installation · Gas Fitter · Gas Range Hookup · Gas Oven Installation · Gas Pipe Installation and Repair · Gas Technician · Gas Water Heaters · Hot Water Tanks · Hydronic Heating System Installation · Furnace Installation · Furnance Maintenance ·  Natural Gas Installation · Running Gas Line · Switch from Electric to Natural Gas · Radiant Floor Installation · Smart Thermostat installation · Standby Generator Installation · Tankless Water Heater Installation
+		</p>
+	  </div> -->
+      <div class="container-fluid copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a href="#">Galico Home Comfort Inc.</a>, All Right Reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+              <br />Distributed By:
+              <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
