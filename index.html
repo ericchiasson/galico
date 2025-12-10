@@ -46,30 +46,63 @@
     <link href="css/style.css" rel="stylesheet" />
 	
 	<!-- Google Logo (Organization) structured data -->
-	<script type="application/ld+json">
-	{
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Galico Gas Services",
-    "url": "https://galico.ca",
-    "logo": "https://galico.ca/img/Galico_logo_240px.png",
-    "image": "https://galico.ca/img/about.jpg",
-    "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Almonte",
-        "addressRegion": "ON",
-        "postalCode": "K0A 1A0",
-        "addressCountry": "CA"
-    },
-    "telephone": "+1-613-240-4911",
-    "openingHours": "Mo-Su 08:00-20:00",
-    "priceRange": "$$",
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",  // Replace with your actual average rating from Google
-        "reviewCount": "14"   // Replace with your actual average rating from Google
-    },
-    "serviceArea": [
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Galico",
+  "url": "https://galico.ca",
+  "logo": "https://galico.ca/img/Galico_logo_240px.png",
+  "image": "https://galico.ca/img/about.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Almonte",
+    "addressRegion": "ON",
+    "postalCode": "K0A 1A0",
+    "addressCountry": "CA"
+  },
+  "telephone": "+1-343-464-2219",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "20:00"
+  },
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "26"
+  },
+  "serviceArea": [
+    { "@type": "Place", "name": "Almonte" },
+    { "@type": "Place", "name": "Arnprior" },
+    { "@type": "Place", "name": "Carleton Place" },
+    { "@type": "Place", "name": "Carp" },
+    { "@type": "Place", "name": "Kanata" },
+    { "@type": "Place", "name": "Nepean" },
+    { "@type": "Place", "name": "Perth" },
+    { "@type": "Place", "name": "Stittsville" },
+    { "@type": "Place", "name": "Smiths Falls" }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Gas Range Installation",
+        "serviceType": "Residential Gas Fitting Installation",
+        "description": "Professional gas line installation services."
+      },
+      "areaServed": [
         { "@type": "Place", "name": "Almonte" },
         { "@type": "Place", "name": "Arnprior" },
         { "@type": "Place", "name": "Carleton Place" },
@@ -79,112 +112,117 @@
         { "@type": "Place", "name": "Perth" },
         { "@type": "Place", "name": "Stittsville" },
         { "@type": "Place", "name": "Smiths Falls" }
-    ],
-    "makesOffer": [
-        {
-            "@type": "Offer",
-            "name": "Gas Range Installation",
-            "description": "Professional gas line installation services.",
-            "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-            ]
-        },
-        {
-            "@type": "Offer",
-            "name": "Tankless Water Heater Installation",
-            "description": "Expert installation of tankless water heaters.",
-            "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-            ]
-        },
-        {
-            "@type": "Offer",
-            "name": "Radiant Floor Installation",
-            "description": "Install efficient radiant heating systems.",
-            "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-            ]
-        }
-    ],
-    "review": [
-        {
-            "@type": "Review",
-            "author": {
-                "@type": "Person",
-                "name": "Luc"
-            },
-            "reviewBody": "Galico is very punctual and the work is professional. Absolutely no worries about the quality, very reasonably priced and they certified the work. The fact that I hired them more than once speaks for itself.",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            }
-        },
-        {
-            "@type": "Review",
-            "author": {
-                "@type": "Person",
-                "name": "Wesley"
-            },
-            "reviewBody": "Prompt, friendly, and efficient installation. Got my Natural Gas BBQ up and running quickly and answered all my questions.",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            }
-        },
-        {
-            "@type": "Review",
-            "author": {
-                "@type": "Person",
-                "name": "Deep"
-            },
-            "reviewBody": "I would definitely suggest him. He is very professional and talented guy. He is also very responsive and punctual. We just got a new house and we were looking for someone urgently for our gas line installation, and he gave a quicker response and we booked time and done. It was very easy and smooth process to deal with him.",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            }
-        },
-        {
-            "@type": "Review",
-            "author": {
-                "@type": "Person",
-                "name": "Slava"
-            },
-            "reviewBody": "Hard working, well equipped and reasonable. What else can you ask for?",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            }
-        }
-    ]
-   }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Hot Water Tank Installation",
+        "serviceType": "Residential Water Heater Installation",
+        "description": "Expert installation of tank type water heaters."
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Almonte" },
+        { "@type": "Place", "name": "Arnprior" },
+        { "@type": "Place", "name": "Carleton Place" },
+        { "@type": "Place", "name": "Carp" },
+        { "@type": "Place", "name": "Kanata" },
+        { "@type": "Place", "name": "Nepean" },
+        { "@type": "Place", "name": "Perth" },
+        { "@type": "Place", "name": "Stittsville" },
+        { "@type": "Place", "name": "Smiths Falls" }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Tankless Water Heater Installation",
+        "serviceType": "Residential Water Heater Installation",
+        "description": "Expert installation of tankless water heaters."
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Almonte" },
+        { "@type": "Place", "name": "Arnprior" },
+        { "@type": "Place", "name": "Carleton Place" },
+        { "@type": "Place", "name": "Carp" },
+        { "@type": "Place", "name": "Kanata" },
+        { "@type": "Place", "name": "Nepean" },
+        { "@type": "Place", "name": "Perth" },
+        { "@type": "Place", "name": "Stittsville" },
+        { "@type": "Place", "name": "Smiths Falls" }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Radiant Floor Installation",
+        "serviceType": "Residential Hydronic Installation",
+        "description": "Install efficient radiant heating systems."
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Almonte" },
+        { "@type": "Place", "name": "Arnprior" },
+        { "@type": "Place", "name": "Carleton Place" },
+        { "@type": "Place", "name": "Carp" },
+        { "@type": "Place", "name": "Kanata" },
+        { "@type": "Place", "name": "Nepean" },
+        { "@type": "Place", "name": "Perth" },
+        { "@type": "Place", "name": "Stittsville" },
+        { "@type": "Place", "name": "Smiths Falls" }
+      ]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/galicogas",
+    "https://www.instagram.com/galicogas"
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Luc" },
+      "reviewBody": "Galico is very punctual and the work is professional. Absolutely no worries about the quality, very reasonably priced and they certified the work. The fact that I hired them more than once speaks for itself.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Wesley" },
+      "reviewBody": "Prompt, friendly, and efficient installation. Got my Natural Gas BBQ up and running quickly and answered all my questions.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Deep" },
+      "reviewBody": "I would definitely suggest him. He is very professional and talented guy. He is also very responsive and punctual. We just got a new house and we were looking for someone urgently for our gas line installation, and he gave a quicker response and we booked time and done. It was very easy and smooth process to deal with him.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Slava" },
+      "reviewBody": "Hard working, well equipped and reasonable. What else can you ask for?",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ]
+}
+</script>
    </script>
    <style>
         /* Banner styling */
