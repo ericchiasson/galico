@@ -264,6 +264,33 @@
     </div>
     <!-- Spinner End -->
 
+<!-- Promotional Modal Start-->
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="promoModalLabel">Limited-Time Offer!</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center py-4">
+	     <img src="img/carousel-9.jpg" class="img-fluid d-block mx-auto" alt="Hot Water Tank on Vacation">
+        <p class="lead mb-3">Buy a Water Heater and Get a FREE Vacation!</p>
+        <p class="text-muted mb-4">Promotion Ends February 28, 2026.</p>
+        <a href="waterheater.html" class="btn btn-warning btn-lg">Claim This Offer</a>
+      </div>
+      <div class="modal-footer justify-content-center border-0">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="dontShowAgain">
+          <label class="form-check-label small text-muted" for="dontShowAgain">
+            Do not show this again
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Promotional Modal End -->
+
     <!-- Topbar Start -->
 <!--     <div class="container-fluid bg-light p-0">
       <div class="row gx-0 d-none d-lg-flex">
@@ -1151,5 +1178,33 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const promoModal = document.getElementById('promoModal');
+    
+    // Check if user opted out
+    if (localStorage.getItem('promoDismissed') === 'true') {
+      return; // Do not show
+    }
+
+    // Show modal after 1 second (optional delay for better UX)
+    setTimeout(() => {
+      const modal = new bootstrap.Modal(promoModal);
+      modal.show();
+
+      // Handle "Don't show again"
+      const dontShowAgain = document.getElementById('dontShowAgain');
+      const modalCloseBtns = promoModal.querySelectorAll('[data-bs-dismiss="modal"], .btn-close');
+
+      modalCloseBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (dontShowAgain.checked) {
+            localStorage.setItem('promoDismissed', 'true');
+          }
+        });
+      });
+    }, 1000);
+  });
+</script>
   </body>
 </html>
