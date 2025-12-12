@@ -9,53 +9,93 @@
 
 <url>
   <loc>https://galico.ca/</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://galico.ca/freevacation.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://galico.ca/index.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/waterheater.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/gasconnection.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/gasfitting.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/hydronic.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/quickconnect.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/thermostat.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://galico.ca/servicearea.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/faq.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://galico.ca/onboarding.html</loc>
-  <lastmod>2025-11-16T12:58:53+00:00</lastmod>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://galico.ca/arnprior.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://galico.ca/beckwith.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://galico.ca/carletonplace.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://galico.ca/mississippimills.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://galico.ca/ottawa.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://galico.ca/perth.html</loc>
+  <lastmod>2025-12-12T16:57:31+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
