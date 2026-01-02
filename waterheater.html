@@ -47,6 +47,9 @@
 	
    <script>
 document.addEventListener("DOMContentLoaded", function() {
+  /* ===============================
+     ELEMENT REFERENCES
+  =============================== */
   const priceElement = document.getElementById("productPrice");
   const optionRadios = document.querySelectorAll('input[name="purchaseOption"]');
   const sizeDropdown = document.getElementById("size");
@@ -54,6 +57,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const specTab = document.getElementById("specification");
   const mainImage = document.getElementById("mainImage");
   const thumbnailGallery = document.getElementById("thumbnailGallery");
+  const orderButton = document.getElementById("orderButton");
+
+  /* ===============================
+     PRICING TABLE
+  =============================== */
    
   // Pricing Table: [fuel][size]
   const pricing = {
@@ -167,78 +175,113 @@ document.addEventListener("DOMContentLoaded", function() {
       spec: "Make: Bradford White<br><br>Model: RE265T6-1NCWW-458<br><br>Power Source: Electric (240V)<br><br>Storage Capacity: 60 Gallons<br><br>Technical Information: <a href=\"https://docs.bradfordwhite.com/Spec_Sheets/1201_Current.pdf\" target=\"_blank\">Spec Sheet</a>",
       images: ["img/prod/electricdhwFV.jpg", "img/prod/electricdhw.jpg", "img/prod/vitraglas_microban.jpg", "img/prod/servicearea.jpg" ],
 	  link: "https://buy.stripe.com/6oU14nbGtf47cEWflmbo40e"
-    },
-	lp40: {
-      desc: "The Bradford White RG1PV40S6X19 is a 40-gallon liquid propane (LP) water heater, designed to provide a reliable and energy-efficient hot water supply for homes with moderate water demands. With a 38,000 BTU heating capacity, this model ensures consistent hot water availability, making it ideal for households with two to five occupants.<br><br>Power Vent Technology for Flexible Installation: This unit features Power Vent technology, utilizing a fan-assisted exhaust system that efficiently expels combustion gases through a dedicated vent pipe. Unlike traditional atmospheric vent models that require a chimney, Power Vent models offer greater installation flexibility—perfect for homes without conventional venting access.<br><br>Optimized Energy Efficiency & Performance: With a 69% Energy Factor (EF), the RG1PV40S6X19 delivers efficient heating performance, helping reduce energy costs while maintaining a steady hot water supply. The liquid propane fuel source makes it an excellent choice for homes in areas where natural gas is unavailable.<br><br>Durable Construction & Reliable Operation: Built by Bradford White—a trusted industry leader—this water heater features robust components designed for long-term reliability. Routine maintenance, such as flushing the tank to prevent sediment buildup and inspecting the anode rod, helps maximize efficiency and extend service life.<br><br>Installation: Galico will perform a complimentary Remove & Replace (Re & Re) installation, which includes disconnecting your old tank and replacing it with your new one.  Any additional work, such as retrofit to different water heater type (e.g. atmospheric to power vent), will occur at a surcharge at a rate of $130/hr plus materials.<br><br>Service Area: Located in Almonte, Ontario, we serve Ottawa, Arnprior, Carleton Place, Perth, Smiths Falls, and the surrounding areas.",
-      spec: "Make: Bradford White<br><br>Model: RG1PV40S6X19<br><br>Energy Factor: 69%<br><br>Storage Capacity: 40 Gallons<br><br>Power Source: Liquid Propane (LP)<br><br>Heating Capacity: 38,000 BTU<br><br>Dimensions: 56 in. H x 27 in. D<br><br>Technical Information: <a href=\"https://docs.bradfordwhite.com/Spec_Sheets/1261_Current.pdf\" target=\"_blank\">Spec Sheet</a>",
-      images: ["img/prod/powerdhwFV.jpg","img/prod/powerdhw.jpg", "img/prod/vitraglas_microban.jpg", "img/prod/servicearea.jpg" ],
-	  link: "https://buy.stripe.com/9B65kDdOB4ptcEWb56bo40j"
-    },
-	lp50: {
-      desc: "The Bradford White RG1PV50S6X19 is a 50-gallon liquid propane (LP) water heater, designed to provide a reliable and energy-efficient hot water supply for homes with moderate water demands. With a 38,000 BTU heating capacity, this model ensures consistent hot water availability, making it ideal for households with two to five occupants.<br><br>Power Vent Technology for Flexible Installation: This unit features Power Vent technology, utilizing a fan-assisted exhaust system that efficiently expels combustion gases through a dedicated vent pipe. Unlike traditional atmospheric vent models that require a chimney, Power Vent models offer greater installation flexibility—perfect for homes without conventional venting access.<br><br>Optimized Energy Efficiency & Performance: With a 69% Energy Factor (EF), the RG1PV50S6X19 delivers efficient heating performance, helping reduce energy costs while maintaining a steady hot water supply. The liquid propane fuel source makes it an excellent choice for homes in areas where natural gas is unavailable.<br><br>Durable Construction & Reliable Operation: Built by Bradford White—a trusted industry leader—this water heater features robust components designed for long-term reliability. Routine maintenance, such as flushing the tank to prevent sediment buildup and inspecting the anode rod, helps maximize efficiency and extend service life.<br><br>Installation: Galico will perform a complimentary Remove & Replace (Re & Re) installation, which includes disconnecting your old tank and replacing it with your new one.  Any additional work, such as retrofit to different water heater type (e.g. atmospheric to power vent), will occur at a surcharge at a rate of $130/hr plus materials.<br><br>Service Area: Located in Almonte, Ontario, we serve Ottawa, Arnprior, Carleton Place, Perth, Smiths Falls, and the surrounding areas.",
-      spec: "Make: Bradford White<br><br>Model: RG1PV50S6X19<br><br>Energy Factor: 69%<br><br>Storage Capacity: 50 Gallons<br><br>Power Source: Liquid Propane (LP)<br><br>Heating Capacity: 38,000 BTU<br><br>Dimensions: 56 in. H x 27 in. D<br><br>Technical Information: <a href=\"https://docs.bradfordwhite.com/Spec_Sheets/1261_Current.pdf\" target=\"_blank\">Spec Sheet</a>",
-      images: ["img/prod/powerdhwFV.jpg","img/prod/powerdhw.jpg", "img/prod/vitraglas_microban.jpg", "img/prod/servicearea.jpg" ],
-	  link: "https://buy.stripe.com/6oU28r9yl1dhdJ02yAbo40i"
-    },
-	lp75: {
-      desc: "The Bradford White RG2PV75H6X is a 75-gallon natural gas water heater designed for homes with one to two occupants. With a 75,500 BTU heating capacity, it provides a steady and efficient hot water supply for everyday household use.<br><br>Power Vent System for Flexible Installation: This model features a Power Vent system, which allows for efficient exhaust venting using a fan-assisted system rather than a traditional chimney. The sealed combustion system pulls air from outside, ensuring safe operation while reducing heat loss. Homeowners benefit from horizontal or vertical venting options, making installation more flexible for homes without traditional venting access.<br><br>High-Quality Performance & Efficiency: With a 0.69 Uniform Energy Factor (UEF), the RG2PV75H6N delivers efficient heating performance while helping homeowners save on energy costs. The 80-gallon per hour recovery rate ensures that hot water is readily available, reducing downtime and maximizing efficiency. This model is designed for consistent and high-performance heating, making it a great option for homes with multiple bathrooms and high water usage.<br><br>Premium Quality for Comfort & Reliability: Bradford White is recognized as a leading brand in the water heater industry, producing high-quality residential and commercial models. This unit falls into the premium category, making it an excellent choice for homeowners seeking enhanced comfort, reliability, and long-term performance.<br><br>Installation: Galico will perform a complimentary Remove & Replace (Re & Re) installation, which includes disconnecting your old tank and replacing it with your new one.  Any additional work, such as retrofit to different water heater type (e.g. atmospheric to power vent), will occur at a surcharge at a rate of $130/hr plus materials.<br><br>Service Area: Located in Almonte, Ontario, we serve Ottawa, Arnprior, Carleton Place, Perth, Smiths Falls, and the surrounding areas.",
-      spec: "Make: Bradford White<br><br>Model: RG2PV75H6X<br><br>Energy Factor: 58%<br><br>Storage Capacity: 75 Gallons<br><br>Power Source: Natural Gas<br><br>Heating Capacity: 75,500 BTU<br><br>Dimensions: 59 in. x 22 in.<br><br>Technical Information: <a href=\"https://docs.bradfordwhite.com/Spec_Sheets/1261_Current.pdf\" target=\"_blank\">Spec Sheet</a>",
-      images: ["img/prod/powerdhwFV.jpg","img/prod/powerdhw.jpg", "img/prod/vitraglas_microban.jpg", "img/prod/servicearea.jpg" ],
-	  link: "https://buy.stripe.com/5kQ3cvh0N5tx7kC5KMbo40h"
     }
   };
 
+  /* ===============================
+     URL HELPERS
+  =============================== */
+  function syncUrlParams(sku, purchase) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("sku", sku);
+    url.searchParams.set("purchase", purchase.toLowerCase());
+    window.history.replaceState({}, "", url.toString());
+  }
+
+  function restoreFromUrlOrStorage() {
+    const params = new URLSearchParams(window.location.search);
+
+    const urlSku = params.get("sku");
+    const urlPurchase = params.get("purchase");
+
+    // SKU priority: URL → localStorage → current
+    if (urlSku && productContent[urlSku]) {
+      sizeDropdown.value = urlSku;
+    } else {
+      const savedSize = localStorage.getItem("selectedSize");
+      if (savedSize && productContent[savedSize]) {
+        sizeDropdown.value = savedSize;
+      }
+    }
+
+    // Purchase option from URL
+    if (urlPurchase) {
+      const formatted =
+        urlPurchase.charAt(0).toUpperCase() + urlPurchase.slice(1);
+      const radio = document.querySelector(
+        `input[name="purchaseOption"][value="${formatted}"]`
+      );
+      if (radio) radio.checked = true;
+    }
+  }
+
+
+
+  /* ===============================
+     MAIN UPDATE FUNCTION
+  =============================== */
   function updateProductInfo() {
-    const selectedOption = document.querySelector('input[name="purchaseOption"]:checked').value;
+    const selectedOption =
+      document.querySelector('input[name="purchaseOption"]:checked').value;
     const selectedSize = sizeDropdown.value;
 
-    // Save selection in localStorage
-    localStorage.setItem("selectedSize", selectedSize);
-  
-    // Update Price
-    const newPrice = pricing[selectedOption][selectedSize];
-    priceElement.textContent = (selectedOption === "Buy")
-      ? `$${newPrice.toFixed(2)}`
-      : `$${newPrice.toFixed(2)}/month`;
+    if (!pricing[selectedOption] || !productContent[selectedSize]) return;
 
-    // Update Tabs
+    // Save selection
+    localStorage.setItem("selectedSize", selectedSize);
+
+    // Update price
+    const price = pricing[selectedOption][selectedSize];
+    priceElement.textContent =
+      selectedOption === "Buy"
+        ? `$${price.toFixed(2)}`
+        : `$${price.toFixed(2)}/month`;
+
+    // Update description & specs
     descTab.innerHTML = productContent[selectedSize].desc;
     specTab.innerHTML = productContent[selectedSize].spec;
 
-    // Update Images
+    // Update images
     const images = productContent[selectedSize].images;
     mainImage.src = images[0];
     thumbnailGallery.innerHTML = "";
+
     images.forEach(img => {
       const thumb = document.createElement("img");
       thumb.src = img;
       thumb.className = "img-thumbnail";
       thumb.style.width = "100px";
-	  thumb.style.height = "100px";
+      thumb.style.height = "100px";
       thumb.style.cursor = "pointer";
-      thumb.addEventListener("click", () => { mainImage.src = img; });
+      thumb.addEventListener("click", () => (mainImage.src = img));
       thumbnailGallery.appendChild(thumb);
-	  
-	// Update Order Button
-	
-
     });
-  const orderButton = document.getElementById("orderButton");
-    orderButton.href = productContent[selectedSize].link;
-  }
-    // Restore saved selection on page load
-   const savedSize = localStorage.getItem("selectedSize");
-   if (savedSize) sizeDropdown.value = savedSize;
 
-  // Event Listeners
-  optionRadios.forEach(radio => radio.addEventListener("change", updateProductInfo));
+    // Update CTA (Stripe)
+    orderButton.href = productContent[selectedSize].link;
+
+    // Sync URL
+    syncUrlParams(selectedSize, selectedOption);
+  }
+
+  /* ===============================
+     EVENT LISTENERS
+  =============================== */
+  optionRadios.forEach(radio =>
+    radio.addEventListener("change", updateProductInfo)
+  );
+
   sizeDropdown.addEventListener("change", updateProductInfo);
 
-  // Initialize
+  /* ===============================
+     INIT
+  =============================== */
+  restoreFromUrlOrStorage();
   updateProductInfo();
-  });
- 
+
+});
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -335,6 +378,7 @@ document.addEventListener("DOMContentLoaded", function() {
   ]
 } 
 </script>
+
 
    <style>
         /* Banner styling */
